@@ -1,0 +1,27 @@
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  color: white;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
