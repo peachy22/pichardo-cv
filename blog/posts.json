@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Building a CV",
+    "date": "2025-10-05",
+    "summary": "How I coded this website from scratch using HTML, CSS, and JavaScript.",
+    "link": "posts/sample-post.html"
+  },
+  {
+    "title": "Making Another Post",
+    "date": "2025-09-21",
+    "summary": "Because I needed another one.",
+    "link": "posts/sample-post-2.html"
+  }
+]
