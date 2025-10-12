@@ -8,12 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Stephan Pichardo</h1>
-    <p>Data Engineering and Business Intelligence</p>
-    <nav>
-      <a href="index.html">CV</a>
-      <a href="blog/index.html">Projects</a>
-    </nav>
+  <div id="navbar"></div>
   </header>
 
   <section id="about">
@@ -53,4 +48,14 @@
     <p>GitHub: <a href="#">github.com/yourusername</a></p>
   </section>
 </body>
+
+  <script>
+    // Inject nav.html into #navbar
+    fetch("/partials/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      });
+  </script>
+
 </html>
