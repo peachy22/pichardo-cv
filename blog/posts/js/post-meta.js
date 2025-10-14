@@ -4,7 +4,7 @@
 
   async function loadMeta(){
     try{
-      const resp = await fetch('../posts.json');
+  const resp = await fetch('../../posts.json');
       const posts = await resp.json();
       const post = posts.find(p => p.name === contentName);
       if(!post) return console.warn('post not found for', contentName);

@@ -3,7 +3,7 @@
 
   async function loadContent(){
     try{
-      const res = await fetch('content/' + contentName + '_content.html');
+  const res = await fetch('content/' + contentName + '_content.html'); // path is correct, relative to posts/*.html
       if(!res.ok) throw new Error('Failed to fetch content: ' + res.status);
       const html = await res.text();
       const container = document.getElementById('content');

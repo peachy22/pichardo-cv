@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stephan Pichardo | CV</title>
-  <link rel="stylesheet" href="pichardo-cv/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
@@ -18,10 +18,10 @@
 </section>
 </body>
 
-  <script src="pichardo-cv/blog/js/get-articles.js"></script>
+  <script src="js/get-articles.js"></script>
   
   <script>
-    fetch("pichardo-cv/js/nav.html")
+  fetch("../js/nav.html")
       .then(response => response.text())
       .then(html => {
         document.getElementById("navbar").innerHTML = html;
