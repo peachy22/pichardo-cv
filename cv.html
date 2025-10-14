@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephan Pichardo | CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div id="navbar"></div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A short professional bio goes here. One or two sentences about your career goals and expertise.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <h3>Job Title – Company</h3>
+    <p><em>Jan 2020 – Present</em></p>
+    <ul>
+      <li>Key responsibility or achievement</li>
+      <li>Another one</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Sc. in Computer Science, University Name, 2022</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, Python, Git, SQL</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p><a href="https://github.com/yourusername/project">Cool Project</a> – Short description</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: you@example.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+  </section>
+</body>
+
+  <script>
+    // Inject nav.html into #navbar
+    fetch("js/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      });
+  </script>
+
+</html>
