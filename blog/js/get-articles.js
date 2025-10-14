@@ -1,5 +1,5 @@
 
-fetch('posts.json')
+fetch('../posts.json')
   .then(response => response.json())
   .then(posts => {
     const blogList = document.getElementById('blog-list');
