@@ -42,10 +42,10 @@
     "link": "../blog/posts/basket.html"
   },
   {
-    "name": "basket",
-    "title": "Tech Products Market Basket Analysis",
-    "date": "2023-06-01",
-    "summary": "A study in product purchase affinity for a tech retailer, using R",
-    "link": "../blog/posts/basket.html"
+    "name": "business",
+    "title": "Simple and Effective Business Visuals",
+    "date": "2023-07-11",
+    "summary": "A short SAS case study in resisting the temptation to use the fanciest-looking charts",
+    "link": "../blog/posts/business.html"
   }
 ]
