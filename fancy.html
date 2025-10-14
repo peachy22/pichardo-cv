@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stephan Pichardo, MSDA, MBA</title>
+<style>
+  body {
+    margin: 0;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  #particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 60px;
+    transition: all 0.6s ease;
+  }
+
+  .menu-item {
+    cursor: pointer;
+    font-size: 2rem;
+    opacity: 0.9;
+    transition: all 0.6s ease;
+    position: relative;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-5px) scale(1.05); 
+    opacity: 1;
+  }
+
+  .active {
+    position: absolute;
+    font-size: 3rem !important;
+  }
+
+  .fade-out {
+    opacity: 0 !important;
+  }
+
+  .content {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 1.2rem;
+  }
+
+  .content.show {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+
+<div class="menu">
+  <div class="menu-item" data-content="cv">CV</div>
+  <div class="menu-item" data-content="about">About</div>
+  <div class="menu-item" data-content="projects">Projects</div>
+</div>
+
+<div class="content" id="content"></div>
+
+<script>
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+
+  const particles = Array.from({ length: 60 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.5,
+    dy: (Math.random() - 0.5) * 0.5,
+  }));
+
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p) => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(100,100,100,0.3)';
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+    requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+
+  const menuItems = document.querySelectorAll('.menu-item');
+  const contentDiv = document.getElementById('content');
+
+  const pageContent = {
+    cv: 'Here is my CV content...',
+    about: 'Here is some information about me...',
+    projects: 'Here are my projects...',
+  };
+
+  let activeItem = null;
+
+  menuItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (activeItem) return; // prevent double clicks
+
+      activeItem = item;
+      menuItems.forEach((i) => {
+        if (i !== item) i.classList.add('fade-out');
+      });
+      item.classList.add('active');
+
+      setTimeout(() => {
+        contentDiv.innerHTML = pageContent[item.dataset.content];
+        contentDiv.classList.add('show');
+      }, 700);
+    });
+  });
+
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>

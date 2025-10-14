@@ -1,8 +1,11 @@
-// /blog/script.js
+
 fetch('posts.json')
   .then(response => response.json())
   .then(posts => {
     const blogList = document.getElementById('blog-list');
+
+
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
     
     posts.forEach(post => {
       const article = document.createElement('article');

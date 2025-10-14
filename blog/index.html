@@ -13,15 +13,15 @@
 
 <section>
   <main id="blog-list">
-    <!-- JavaScript will load posts here -->
+  
   </main>
 </section>
 </body>
 
-  <script src="script.js"></script>
+  <script src="js/get-articles.js"></script>
+  
   <script>
-    // Inject nav.html into #navbar
-    fetch("/partials/nav.html")
+    fetch("/js/nav.html")
       .then(response => response.text())
       .then(html => {
         document.getElementById("navbar").innerHTML = html;
