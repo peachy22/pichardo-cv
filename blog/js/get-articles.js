@@ -9,13 +9,15 @@ fetch('posts.json')
     
     posts.forEach(post => {
       const section = document.createElement('section');
-      section.innerHTML = `
+      section.innerHTML = `<a href="${post.link}" style="text-decoration: none; color: inherit;">
+        <div class = "card">
         <div class = "thumbnail"><img src="${post.image}"></img></div>
         <div>
-        <h><a href="${post.link}">${post.title}</a></h>
-        <p><em>${new Date(post.date).toLocaleDateString()}</em></p>
+        <b><span style="font-size: 20px; color: #000000ff; ">${post.title}</span></b>
         <p>${post.summary}</p>
         </div>
+        </div>
+        </a>
       `;
       blogList.appendChild(section);
     });

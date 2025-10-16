@@ -3,7 +3,8 @@ const canvas = document.getElementById('particle-bg');
 const ctx = canvas.getContext('2d');
 
 let particlesArray;
-let numParticles = 80;
+let linesArray;
+let numParticles = 50;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -24,18 +25,25 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // wrap around edges
     if (this.x < 0) this.x = canvas.width;
     if (this.x > canvas.width) this.x = 0;
     if (this.y < 0) this.y = canvas.height;
     if (this.y > canvas.height) this.y = 0;
   }
   draw() {
-    ctx.fillStyle = 'rgba(157, 158, 165, 0.6)';
+    ctx.fillStyle = 'rgba(179, 182, 198, 0.6)';
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
   }
+  drawLines1() {
+    ctx.beginPath();
+    ctx.moveTo(this.x, this.y);
+    ctx.lineTo(0, 0);
+    ctx.closePath();
+    ctx.strokeStyle = 'rgba(106, 107, 109, 0.08)';
+    ctx.stroke();
+  }  
 }
 
 function init() {
@@ -48,8 +56,9 @@ function init() {
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particlesArray.forEach(particle => {
-    particle.update();
-    particle.draw();
+  particle.update();
+  particle.draw();
+  particle.drawLines1();
   });
   requestAnimationFrame(animate);
 }

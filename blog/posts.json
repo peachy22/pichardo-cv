@@ -17,7 +17,7 @@
   },
   {
     "name": "revenue",
-    "title": "Revenue Projection with ARIMA",
+    "title": "Revenue Projection",
     "date": "2022-11-07",
     "summary": "Modeling future revenue for a telecom company with R",
     "link": "../blog/posts/revenue.html",
@@ -25,7 +25,7 @@
   },
   {
     "name": "mortgage",
-    "title": "Mortgage Approval Prediction with XGBoost",
+    "title": "Mortgage Approval Prediction",
     "date": "2022-11-08",
     "summary": "A model in Python for analyzing mortgage application data",
     "link": "../blog/posts/mortgage.html",
