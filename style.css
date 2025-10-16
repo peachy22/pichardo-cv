@@ -8,7 +8,7 @@
   background: #e0e0e0;
 }
 
-header, body, footer, article {
+header, body, footer, article, section {
   position: relative;
   z-index: 1;
 }
@@ -18,19 +18,16 @@ body {
   line-height: 1.6;
   margin: 0;
   padding:  0;
-  background: #f9f9f9;
   color: #333;
 }
 
 article {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 1rem;
   padding: 0;
-  background: #f9f9f9;
   color: #333;
+  max-width: 1000px;
+  margin: auto;
 }
 
 header {
@@ -40,19 +37,44 @@ header {
 }
 
 nav a {
-  margin: 0 10px;
-  color: rgb(60, 61, 71);
+  display: inline-block;
+  color: #65606c;
   text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  padding: 5px 10px;
+  white-space: nowrap;
 }
 
 nav a:hover {
-  color: #b4b4b4; 
+  transform: scale(1.2);
+  color: #0070f3;
 }
 
-section {
-  padding: 2rem;
-  max-width: 800px;
+#blog-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px; 
+  padding: 10px;
+  max-width: 1200px;
   margin: auto;
 }
 
+#blog-list section {
+  display: grid;
+  grid-template-columns:  200px 1fr;
+  gap: 20px; 
+  padding: 15px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  opacity: 0.9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: rgb(41, 41, 47);
+}
 
+.thumbnail img {
+  width: 200px;      
+  height: 150px;     
+  border-radius: 8px;
+}

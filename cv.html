@@ -10,19 +10,18 @@
   <header>
   <div id="navbar"></div>
   </header>
+<canvas id="particle-bg"></canvas>
 
-<iframe src="/pichardo-cv/files/pichardo_cv_2025_d.pdf"  
-frameborder="0" scrolling="no" width="100%" height="1000px"
-></iframe>
+<div id="navbar"></div>
 
-</body>
+<iframe 
+    src="files/pichardo_cv_2025_d.pdf" 
+    width="100%" 
+    height="600px"
+    style="border:1px solid #ccc;">
+</iframe>
 
-  <script>
-    fetch("js/nav.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-      });
-  </script>
+<script src="js/getnav.js"></script>
+<script src ="js/particles.js"></script>
 
 </html>

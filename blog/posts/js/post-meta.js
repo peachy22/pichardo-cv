@@ -1,5 +1,4 @@
 (function(){
-  // Read content name from the top-level data attribute
   const contentName = document.documentElement.dataset.content;
 
   async function loadMeta(){
