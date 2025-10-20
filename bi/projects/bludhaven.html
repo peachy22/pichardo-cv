@@ -11,15 +11,6 @@
       <h1>Bludhaven State Penitentiary</h1>
    </header>
 
-<article>
-   By law in the United States, incarcerated individuals are entitled to healthcare services. The standards are set by state and federal law; county sherriff's offices or state DOCs face legal liability for not providing adequate medical or mental health care, and in many cases are also required to provide specialty rehabilitation and re-entry services to incarcerated individuals. It is common to see correctional facilities contract with third-party healthcare providers to deliver these services.
-   </br></br>
-   I developed a synthetic database based upon the scenario of a fictional prison complex from the DC Comics universe, which has engaged in such a contract. The terms include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.
-    </br></br>
-    The database is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties.
-     </br></br>
-
-
 
   <div class="mermaid">
 erDiagram
@@ -74,19 +65,32 @@ erDiagram
     um }o..|| um_type : um_type_fkey
   </div>
 
- <p>No matter the quality of care provided, there are going to be health situations that the facility is ill-equipped for. In these cases, patients may be taken off-site to local hospitals - or outside specialists must be brought in to the facility. Such situations pose unique challenges in cost, continuity of care, and security. Utilization management (UM) is a set of processes and practices for meeting KPIs related to offsite services. Because of the unique challenges posed by UM events, the KPIs are usually aimed at limiting the number of events. Lower utilization not only means less exposure to operational risk, but also serves as an indication that the correctional facility is well-equipped to handle the health challenges of its population. The UM Dashboard thus helps administrators and auditors keep tabs on the quality of onsite care.
-   </p>
+<article>
+   By law in the United States, incarcerated individuals are entitled to healthcare services. The standards are set by state and federal law; county sherriff's offices or state DOCs face legal liability for not providing adequate medical or mental health care, and in many cases are also required to provide specialty rehabilitation and re-entry services to incarcerated individuals. It is common to see correctional facilities contract with third-party healthcare providers to deliver these services.
+   </br></br>
+   This synthetic database is based upon the scenario of a fictional prison complex from the DC Comics universe, which has engaged in such a contract. The terms include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.
+    </br></br>
+    The database is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties.
+     </br></br>
+
+
    </article>
 
+   <!--
+   <article>
 <div class="looker-container">
   <iframe src="https://lookerstudio.google.com/embed/reporting/77807e05-2d57-43a2-a14a-684366f41cca/page/kdAcF"
     frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
+ <p>No matter the quality of care provided, there are going to be health situations that the facility is ill-equipped for. In these cases, patients may be taken off-site to local hospitals - or outside specialists must be brought in to the facility. Such situations pose unique challenges in cost, continuity of care, and security. Utilization management (UM) is a set of processes and practices for meeting KPIs related to offsite services. Because of the unique challenges posed by UM events, the KPIs are usually aimed at limiting the number of events. Lower utilization not only means less exposure to operational risk, but also serves as an indication that the correctional facility is well-equipped to handle the health challenges of its population. The UM Dashboard thus helps administrators and auditors keep tabs on the quality of onsite care.
+   </p>
+</article>
+-->
 
 
 
-<p>Text</p>
+
 
 <canvas id="particle-bg"></canvas>
 <script src="js/post-meta.js"></script>
