@@ -94,9 +94,13 @@
 The vigilante known as Nightwing (formerly Robin, known associate of the Batman) regularly rounds up dangerous, super-powered criminals, leaving them in critical condition for BSP's corrections officers to deal with. In response, the penitentiary has contracted with a private specialty medical and mental health care provider - a subsidiary of LexCorp. The terms of the contract include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, corporate leadership, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.   
 
 </br>
-  <div class="mermaid">
-erDiagram
-    patients {
+  <div class="mermaid">erDiagram
+    "public.document_type" {
+        text id PK
+        text name
+    }
+
+    "public.patients" {
         text patientid PK
         text bookingnumber
         timestamp bookingdate
@@ -108,27 +112,37 @@ erDiagram
         timestamp lastupdatedatetime
     }
 
-    um_priority {
+    "public.um_priority" {
         text id PK
         text name
     }
 
-    um_specialty {
+    "public.um_specialty" {
         text id PK
         text name
     }
 
-    um_status {
+    "public.um_status" {
         text id PK
         text name
     }
 
-    um_type {
+    "public.um_type" {
         text id PK
         text name
     }
 
-    um {
+    "public.documents" {
+        text id PK
+        text patientid FK
+        text type FK
+        timestamp stamp
+        text createdby
+    }
+    "public.documents" }o..|| "public.patients" : documents_patientid_fkey
+    "public.documents" }o..|| "public.document_type" : documents_type_fkey
+
+    "public.um" {
         text id PK
         text patientid FK
         text type FK
@@ -140,11 +154,12 @@ erDiagram
         timestamp hospitaladmissiondate
         timestamp hospitaldischargedate
     }
-    um }o..|| patients : um_patientid_fkey
-    um }o..|| um_priority : um_priority_fkey
-    um }o..|| um_specialty : um_specialty_fkey
-    um }o..|| um_status : um_status_fkey
-    um }o..|| um_type : um_type_fkey
+    "public.um" }o..|| "public.patients" : um_patientid_fkey
+    "public.um" }o..|| "public.um_priority" : um_priority_fkey
+    "public.um" }o..|| "public.um_specialty" : um_specialty_fkey
+    "public.um" }o..|| "public.um_status" : um_status_fkey
+    "public.um" }o..|| "public.um_type" : um_type_fkey
+
   </div>
 </br>
  The data is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties. Stakeholders use Looker Business Intelligence tools to measure KPIs:
