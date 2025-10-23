@@ -1,0 +1,67 @@
+erDiagram
+    "public.document_type" {
+        text id PK
+        text name
+    }
+
+    "public.patients" {
+        text patientid PK
+        text bookingnumber
+        timestamp bookingdate
+        text custodystatus
+        text housinglocation
+        text race
+        text sex
+        timestamp releasedate
+        timestamp lastupdatedatetime
+    }
+
+    "public.um_priority" {
+        text id PK
+        text name
+    }
+
+    "public.um_specialty" {
+        text id PK
+        text name
+    }
+
+    "public.um_status" {
+        text id PK
+        text name
+    }
+
+    "public.um_type" {
+        text id PK
+        text name
+    }
+
+    "public.documents" {
+        text id PK
+        text patientid FK
+        text type FK
+        timestamp stamp
+        text createdby
+    }
+    "public.documents" }o..|| "public.patients" : documents_patientid_fkey
+    "public.documents" }o..|| "public.document_type" : documents_type_fkey
+
+    "public.um" {
+        text id PK
+        text patientid FK
+        text type FK
+        text priority FK
+        timestamp stamp
+        text status FK
+        text specialty FK
+        text hospital
+        timestamp hospitaladmissiondate
+        timestamp hospitaldischargedate
+    }
+    "public.um" }o..|| "public.patients" : um_patientid_fkey
+    "public.um" }o..|| "public.um_priority" : um_priority_fkey
+    "public.um" }o..|| "public.um_specialty" : um_specialty_fkey
+    "public.um" }o..|| "public.um_status" : um_status_fkey
+    "public.um" }o..|| "public.um_type" : um_type_fkey
+
+  

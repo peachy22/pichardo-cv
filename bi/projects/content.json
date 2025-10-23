@@ -1,0 +1,23 @@
+[
+  {
+    "name": "um",
+    "title": "Utilization Management Dashboard",
+    "summary": "No matter the quality of care provided, there are going to be health situations that the facility is ill-equipped for. In these cases, patients may be taken off-site to local hospitals - or outside specialists must be brought in to the facility. Such situations pose unique challenges in cost, continuity of care, and security. Utilization management (UM) is a set of processes and practices for meeting KPIs related to offsite services. Because of the unique challenges posed by UM events, the KPIs are usually aimed at limiting the number of events. Lower utilization not only means less exposure to operational risk, but also serves as an indication that the correctional facility is well-equipped to handle the health challenges of its population. The UM Dashboard thus helps administrators and auditors keep tabs on the quality of onsite care.",
+    "link": "https://lookerstudio.google.com/embed/reporting/77807e05-2d57-43a2-a14a-684366f41cca/page/kdAcF",
+    "image": "images/um.png"
+  },
+  {
+    "name": "",
+    "title": "",
+    "summary": "",
+    "link": "",
+    "image": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "summary": "",
+    "link": "",
+    "image": ""
+  }
+]

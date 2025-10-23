@@ -31,9 +31,10 @@ iframe {
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding:  0;
+  padding: 40px;
   color: #333;
+  max-width: 1200px;
+  margin: auto;
 }
 
 article {
@@ -41,7 +42,7 @@ article {
   line-height: 1.6;
   padding: 40px;
   color: #333;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
 }
 

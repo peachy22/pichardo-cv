@@ -63,18 +63,17 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed;
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content/Box */
@@ -83,12 +82,39 @@
   margin: 1% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 65%; 
+  width: 50%; 
+}
+
+#content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; 
+  padding: 10px;
+  margin: auto;
+}
+
+#content-list section {
+  transition: all 0.3s ease;
+  padding: 15px;
+  height: max-content;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  opacity: 0.9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: rgb(41, 41, 47);
+}
+
+#content-list section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 </style>
+<body>
 
-<article>
+
+
+
    By law in the United States, incarcerated individuals are entitled to healthcare services. The standards of care are set by state and federal law; county sheriffs offices or state DOCs face legal liability for not providing adequate medical or mental health care, and in many cases are also required to provide specialty rehabilitation and re-entry services to incarcerated individuals. It is common to see correctional facilities contract with third-party healthcare providers to deliver these services.
 </br></br>
 The vigilante known as Nightwing (formerly Robin, known associate of the Batman) regularly rounds up dangerous, super-powered criminals, leaving them in critical condition for BSP's corrections officers to deal with. In response, the penitentiary has contracted with a private specialty medical and mental health care provider - a subsidiary of LexCorp. The terms of the contract include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, corporate leadership, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.   
@@ -159,28 +185,24 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
     "public.um" }o..|| "public.um_specialty" : um_specialty_fkey
     "public.um" }o..|| "public.um_status" : um_status_fkey
     "public.um" }o..|| "public.um_type" : um_type_fkey
-
   </div>
 </br>
  The data is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties. Stakeholders use Looker Business Intelligence tools to measure KPIs:
      </br></br>
-  <div class = "dbgrid">
-     <div id = "opendb" class = "dblink">
-  <figure>
-      <img src="../images/um.png" alt="UM">
-      <figcaption>Utilization Management Dashboard</figcaption>
-    </figure>
-     </div>
-     <div class = "dblink">
-        Under Construction
-     </div>
-     <div class = "dblink">
-        Under Contruction
-     </div>
-</div>
- </br></br>
-   
-</article>
+
+
+
+
+
+
+
+ <div id="content-list"></div>
+<script src="js/get-content.js"></script>
+
+    </br>
+    [Additional content under construction]
+
+</body>
 
 
 
@@ -193,40 +215,6 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
 </div>
 
 
-<script>
-const btn = document.getElementById("opendb");
-const modal = document.getElementById("myModal");
-const sectionContainer = document.getElementById("section");
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
-  sectionContainer.innerHTML = "";
-  const section = document.createElement('section');
-  section.innerHTML = `
-    <div class="looker-container" style="width:100%;height:100%;">
-      <iframe 
-        src="https://lookerstudio.google.com/embed/reporting/77807e05-2d57-43a2-a14a-684366f41cca/page/kdAcF"
-        frameborder="0"
-        style="border:none;width:100%;height:100%;"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-<p>No matter the quality of care provided, there are going to be health situations that the facility is ill-equipped for. In these cases, patients may be taken off-site to local hospitals - or outside specialists must be brought in to the facility. Such situations pose unique challenges in cost, continuity of care, and security. Utilization management (UM) is a set of processes and practices for meeting KPIs related to offsite services. Because of the unique challenges posed by UM events, the KPIs are usually aimed at limiting the number of events. Lower utilization not only means less exposure to operational risk, but also serves as an indication that the correctional facility is well-equipped to handle the health challenges of its population. The UM Dashboard thus helps administrators and auditors keep tabs on the quality of onsite care.
-   </p>
-
-  `;
-  sectionContainer.appendChild(section);
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-</script>
 
 </html>
 
@@ -236,213 +224,4 @@ window.onclick = function(event) {
 
 
 
-
-
-
-
-
-
-<!--
-
-    <div class = "dblink">
-<a href="" style="text-decoration: none; color: inherit;">
-        <div class = "pcard">
-        <div>
-        <b><span style="font-size: 20px; color: #000000ff; ">Dashboard Title</span></b>
-        <p>Dashboard Summary</p>
-        </div>
-        </div>
-        </a></div>
-
-
-  <div class="mermaid">
-erDiagram
-    patients {
-        text patientid PK
-        text bookingnumber
-        timestamp bookingdate
-        text custodystatus
-        text housinglocation
-        text race
-        text sex
-        timestamp releasedate
-        timestamp lastupdatedatetime
-    }
-
-    um_priority {
-        text id PK
-        text name
-    }
-
-    um_specialty {
-        text id PK
-        text name
-    }
-
-    um_status {
-        text id PK
-        text name
-    }
-
-    um_type {
-        text id PK
-        text name
-    }
-
-    um {
-        text id PK
-        text patientid FK
-        text type FK
-        text priority FK
-        timestamp stamp
-        text status FK
-        text specialty FK
-        text hospital
-        timestamp hospitaladmissiondate
-        timestamp hospitaldischargedate
-    }
-    um }o..|| patients : um_patientid_fkey
-    um }o..|| um_priority : um_priority_fkey
-    um }o..|| um_specialty : um_specialty_fkey
-    um }o..|| um_status : um_status_fkey
-    um }o..|| um_type : um_type_fkey
-  </div>
-
-<article>
-   By law in the United States, incarcerated individuals are entitled to healthcare services. The standards are set by state and federal law; county sheriffs offices or state DOCs face legal liability for not providing adequate medical or mental health care, and in many cases are also required to provide specialty rehabilitation and re-entry services to incarcerated individuals. It is common to see correctional facilities contract with third-party healthcare providers to deliver these services.
-   </br></br>
-   This synthetic database is based upon the scenario of a fictional prison complex from the DC Comics universe, which has engaged in such a contract. The terms include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.
-    </br></br>
-    The database is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties.
-     </br></br>
-</article>
-
-<canvas id="particle-bg"></canvas>
-<script src="js/post-meta.js"></script>
-<script src="js/load-content.js"></script>
-<script src ="../../js/particles.js"></script>
-
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script>
-
-<style>
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 1% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 65%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#dblink {
-  display: grid;
-  grid-template-columns: 1;
-  gap: 40px; 
-  padding: 10px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#dblink section {
-  transition: all 0.3s ease;
-  padding: 15px;
-  height: max-content;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  opacity: 0.9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: rgb(41, 41, 47);
-}
-
-#dblink section:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-</style>
-
-
-
-
-
-<button id="myBtn">Open Modal</button>
-
-
-<div id="myModal" class="modal">
-
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div id="section"></div>
-  </div>
-</div>
-
-<script>
-// Get elements
-const btn = document.getElementById("myBtn");
-const modal = document.getElementById("myModal");
-const sectionContainer = document.getElementById("section");
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  
-  sectionContainer.innerHTML = "";
-
-  const section = document.createElement('section');
-  section.innerHTML = `
-    
-    <div class="looker-container" style="width:100%;height:100%;">
-      <iframe 
-        src="https://lookerstudio.google.com/embed/reporting/77807e05-2d57-43a2-a14a-684366f41cca/page/kdAcF"
-        frameborder="0"
-        style="border:none;width:100%;height:100%;"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-<p>No matter the quality of care provided, there are going to be health situations that the facility is ill-equipped for. In these cases, patients may be taken off-site to local hospitals - or outside specialists must be brought in to the facility. Such situations pose unique challenges in cost, continuity of care, and security. Utilization management (UM) is a set of processes and practices for meeting KPIs related to offsite services. Because of the unique challenges posed by UM events, the KPIs are usually aimed at limiting the number of events. Lower utilization not only means less exposure to operational risk, but also serves as an indication that the correctional facility is well-equipped to handle the health challenges of its population. The UM Dashboard thus helps administrators and auditors keep tabs on the quality of onsite care.
-   </p>
-
-  `;
-  sectionContainer.appendChild(section);
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>-->
 
