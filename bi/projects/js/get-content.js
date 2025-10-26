@@ -35,20 +35,19 @@ fetch('content.json')
 
       contentList.appendChild(section);
       document.body.appendChild(modal);
+  
+ 
 
  section.addEventListener('click', () => {
         modal.style.display = 'block';
       });
 
-      window.addEventListener('click', (event) => {
+   window.addEventListener('click', (event) => {
         if (event.target == modal) {
           modal.style.display = 'none';
         }
       });
+
+    
     });
   })
-  .catch(error => {
-    console.error('Error loading content:', error);
-  });
-
-  

@@ -25,39 +25,6 @@
   text-align: center;
 }
 
-.dbgrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px; 
-  padding: 10px;
-  margin: auto;
-}
-
-.dblink {
-  transition: all 0.3s ease;
-  padding: 15px;
-  height: 270px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  opacity: 0.9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: rgb(41, 41, 47);
-}
-
-.dblink img {
-  height: 100%;
-  width: 100%;
-}
-
-.dblink figure {
-  margin: 0;
-}
-
-.dblink figcaption {
-  text-align: center;
-  font-weight: bolder;
-}
-
 .dblink:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -76,7 +43,6 @@
   background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 1% auto; 
@@ -111,15 +77,9 @@
 
 </style>
 <body>
-
-
-
-
-   By law in the United States, incarcerated individuals are entitled to healthcare services. The standards of care are set by state and federal law; county sheriffs offices or state DOCs face legal liability for not providing adequate medical or mental health care, and in many cases are also required to provide specialty rehabilitation and re-entry services to incarcerated individuals. It is common to see correctional facilities contract with third-party healthcare providers to deliver these services.
+The vigilante known as Nightwing (formerly Robin, known associate of the Batman) regularly rounds up dangerous, super-powered criminals, leaving them in critical condition for the city's officers to deal with. In response, the penitentiary has contracted with a private specialty medical and mental health care provider - a subsidiary of LexCorp. The terms of the contract include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, corporate leadership, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care and the inmates' rights (super-powered or not).  
 </br></br>
-The vigilante known as Nightwing (formerly Robin, known associate of the Batman) regularly rounds up dangerous, super-powered criminals, leaving them in critical condition for BSP's corrections officers to deal with. In response, the penitentiary has contracted with a private specialty medical and mental health care provider - a subsidiary of LexCorp. The terms of the contract include requirements on the transparency of medical records data for every patient, and reports are to be made available to auditing bodies, correctional administrators, corporate leadership, and healthcare providers in order to ensure compliance with the contract and laws governing the standard of care.   
-
-</br>
+LexCorp's electronic medical records (EMR) software is built upon a cloud-hosted postgres relational database with the following star schema:
   <div class="mermaid">erDiagram
     "public.document_type" {
         text id PK
@@ -187,7 +147,9 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
     "public.um" }o..|| "public.um_type" : um_type_fkey
   </div>
 </br>
- The data is hosted in a secure PostrgreSQL environment and modeled to track patient admissions, medical encounters, diagnoses, treatments, and outcomes. Relationships between tables are established using primary and foreign keys to ensure data integrity, along with indexes that facilitate performance on complex queries.  At all points of access, patient confidentiality and privacy are to be maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties. Stakeholders use Looker Business Intelligence tools to measure KPIs:
+Healthcare providers enter patient admissions, medical encounters, diagnoses, treatments, and outcomes into the EMR. Access to compliance reporting is enabled with a tech stack that includes spreadsheet software, business intelligence tools, automated emails, and the EMR itself. At all points of access, patient confidentiality and privacy are maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties. 
+ </br> </br>
+ Executive stakeholders use interactive Looker dashboards to measure KPIs at a glance:
      </br></br>
 
 
@@ -200,7 +162,7 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
 <script src="js/get-content.js"></script>
 
     </br>
-    [Additional content under construction]
+    [Additional content is coming soon]
 
 </body>
 
@@ -214,7 +176,9 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
   </div>
 </div>
 
+<script>
 
+</script>
 
 </html>
 

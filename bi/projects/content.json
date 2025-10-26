@@ -7,11 +7,11 @@
     "image": "images/um.png"
   },
   {
-    "name": "",
-    "title": "",
-    "summary": "",
-    "link": "",
-    "image": ""
+    "name": "intake",
+    "title": "Intake Process Compliance",
+    "summary": "Upon being booked into the facility, inmates must receive a suite of screenings and exams in a timely manner. Auditors are keeping track of the four main intake documents with KPIs for 1. whether a record exists for every individual in custody and 2. if it exists, how long it took to complete after they arrived on-site. As interested parties use this dashboard to track the KPIs, they can drill into different date ranges to find patterns that can prompt additional investigation into what causes deficiencies in the workflow. In an ideal situation, the four main KPIs read 100% completion and the bars for each document completely fill up the outline representing the total number of inmates booked that day.",
+    "link": "https://lookerstudio.google.com/embed/reporting/f4f46cdd-fd18-48ab-b2ba-dbd05661594a/page/GTYcF",
+    "image": "images/intake.png"
   },
   {
     "name": "",

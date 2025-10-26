@@ -5,14 +5,16 @@
     "date": "2025-10-30",
     "summary": "I developed a synthetic database based upon a fictional correctional facility from the DC Comics Universe. By law, inmates are required to receive a high standard of medical and mental health care. Correctional officers, medical providers, and regulatory bodies require constant access to medical records and operations data.</br></br> Explore how business intelligence tools are leveraged to optimize prison operations and improve inmate rehabilitation programs, ultimately transforming the penitentiary into a nationwide model for super-powered offender rehabilitation and re-entry.",
     "link": "projects/bludhaven.html",
-    "image": "images/Nightwing-106-Dan-Mora-Banner.jpg.webp"
+    "image": "images/Nightwing-106-Dan-Mora-Banner.jpg.webp",
+    "stack": "PostgreSQL | Supabase | Looker | Crystal Reports | Proprietary EMR"
   },
   {
     "name": "spat",
-    "title": "SP Tutoring and Test Prep [UNDER CONSTRUCTION]",
+    "title": "SP Tutoring and Test Prep [COMING SOON]",
     "date": "2022-10-25",
     "summary": "This test prep and college admissions consulting business started small, propelled by a passionate heart for for helping local students and their families navigate the pressures of modern academics. In time, it grew to be a signifcant regional player without losing its original identity or its repuation for ''compassionate smarts''.</br></br> Learn about the pipelines used by leadership to power business decisions and lend transparency to operations including payment processing, scheduling, and customer relationship management.",
     "link": "",
-    "image": "images/2020-05-31.png"
+    "image": "images/2020-05-31.png",
+    "stack": "MongoDB, Salesforce CRM, Tableau"
   }
 ]

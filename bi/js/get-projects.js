@@ -14,6 +14,7 @@ fetch('projects.json')
         <div>
         <b><span style="font-size: 20px; color: #000000ff; ">${post.title}</span></b>
         <p>${post.summary}</p>
+        <p>Stack: <span style="font-weight: bold;">${post.stack}</span></p>
         </div>
         </div>
         </a>
