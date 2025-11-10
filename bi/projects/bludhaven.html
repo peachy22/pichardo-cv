@@ -81,12 +81,12 @@ The vigilante known as Nightwing (formerly Robin, known associate of the Batman)
 </br></br>
 LexCorp's electronic medical records (EMR) software is built upon a cloud-hosted postgres relational database with the following star schema:
   <div class="mermaid">erDiagram
-    "public.document_type" {
+    document_type {
         text id PK
         text name
     }
 
-    "public.patients" {
+    patients {
         text patientid PK
         text bookingnumber
         timestamp bookingdate
@@ -98,37 +98,50 @@ LexCorp's electronic medical records (EMR) software is built upon a cloud-hosted
         timestamp lastupdatedatetime
     }
 
-    "public.um_priority" {
+    um_priority {
         text id PK
         text name
     }
 
-    "public.um_specialty" {
+    um_specialty {
         text id PK
         text name
     }
 
-    "public.um_status" {
+    um_status {
         text id PK
         text name
     }
 
-    "public.um_type" {
+    um_type {
         text id PK
         text name
     }
 
-    "public.documents" {
+    daily_reports {
+        text id PK
+        text statid
+        text stat
+        text patientid FK
+        timestamp stamp
+        text facility
+        text location
+        text objectid
+        text otherinfo
+    }
+    daily_reports }o..|| patients : daily_reports_patientid_fkey
+
+    documents {
         text id PK
         text patientid FK
         text type FK
         timestamp stamp
         text createdby
     }
-    "public.documents" }o..|| "public.patients" : documents_patientid_fkey
-    "public.documents" }o..|| "public.document_type" : documents_type_fkey
+    documents }o..|| patients : documents_patientid_fkey
+    documents }o..|| document_type : documents_type_fkey
 
-    "public.um" {
+    um {
         text id PK
         text patientid FK
         text type FK
@@ -140,11 +153,12 @@ LexCorp's electronic medical records (EMR) software is built upon a cloud-hosted
         timestamp hospitaladmissiondate
         timestamp hospitaldischargedate
     }
-    "public.um" }o..|| "public.patients" : um_patientid_fkey
-    "public.um" }o..|| "public.um_priority" : um_priority_fkey
-    "public.um" }o..|| "public.um_specialty" : um_specialty_fkey
-    "public.um" }o..|| "public.um_status" : um_status_fkey
-    "public.um" }o..|| "public.um_type" : um_type_fkey
+    um }o..|| patients : um_patientid_fkey
+    um }o..|| um_priority : um_priority_fkey
+    um }o..|| um_specialty : um_specialty_fkey
+    um }o..|| um_status : um_status_fkey
+    um }o..|| um_type : um_type_fkey
+
   </div>
 </br>
 Healthcare providers enter patient admissions, medical encounters, diagnoses, treatments, and outcomes into the EMR. Access to compliance reporting is enabled with a tech stack that includes spreadsheet software, business intelligence tools, automated emails, and the EMR itself. At all points of access, patient confidentiality and privacy are maintained in accordance with HIPAA regulations; encryption standards and row-level security are implemented to restrict access to only a minimum of authorized parties. 
