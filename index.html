@@ -17,7 +17,7 @@
 </header>
 
 <article> 
-<div><img src="F6B78F28-4FE9-4020-8DA5-516F0051B624_1_201_a.jpeg" ></img></div> 
+<div><img src="images/headshot.jpeg" ></img></div> 
 <div></br>
 Thank you for taking the time to visit my portfolio website! 
   </br></br>
@@ -30,6 +30,7 @@ I'm more interested lately in larger-scale explorations that illuminate how mode
 I am currently open to employment opportunities where aggressive innovation, nuanced communication, and keen business insight will be valued. For questions and a full CV, please reach out to me at <a href=mailto:“stephan.pichardo@protonmail.com”>stephan.pichardo@protonmail.com</a>.
 </div></article>
 
+<div id="cert-list"></div>
 
 <style>
 img {
@@ -39,8 +40,50 @@ img {
   margin-right: 20px;
   border-radius: 30px;
 }
+
+#cert-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; 
+  margin: auto;
+  max-width: 50%;
+}
+
+#cert-list img {
+  all: unset;
+  width: 100%;
+  margin: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#cert-list img:hover {
+  transform: scale(1.1);
+}
+
+#degree-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px; 
+  margin: auto;
+  max-width: 75%;
+}
+
+#degree-list img {
+  all: unset;
+  width: 230px;
+  height: 67px;
+  margin: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
+
 </style>
 
 <canvas id="particle-bg"></canvas>
 <script src ="js/particles.js"></script>
+<script src="js/getcerts.js"></script>
+<script src="js/getdegs.js"></script>
 </html>
