@@ -13,5 +13,20 @@
     "name": "pb_an",
     "link": "https://learn.microsoft.com/en-us/users/stephanpichardo-4037/credentials/1e3474c406786924",
     "image": "images/pb_an.png"
+  },
+  {
+    "name": "am_ai",
+    "link": "",
+    "image": "images/am_ai_bw.png"
+  },
+  {
+    "name": "am_eng",
+    "link": "",
+    "image": "images/am_eng_bw.png"
+  },
+  {
+    "name": "az_ai",
+    "link": "",
+    "image": "images/az_ai_bw.png"
   }
 ]
