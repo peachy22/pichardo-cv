@@ -170,7 +170,7 @@ body {
   text-align: center;
   padding: 1rem;
   color: rgb(60, 61, 71);
-} */
+} 
 /* 
 nav a {
   display: inline-block;
@@ -185,7 +185,7 @@ nav a {
 nav a:hover {
   transform: scale(1.2);
   color: #0070f3;
-}
+}*/
 
 #blog-list {
   display: grid;
@@ -223,7 +223,7 @@ nav a:hover {
   grid-template-columns:  200px 1fr;
   gap: 20px; 
 }
-
+/*
 .pcard {
   display: grid;
   grid-template-columns:  repeat(1, 1fr);
