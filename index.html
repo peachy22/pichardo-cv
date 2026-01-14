@@ -9,26 +9,52 @@
 
 <header>
   <h1>STEPHAN PICHARDO, MSDA, MBA</h1>
-  <nav>
-  <a href="/pichardo-cv/">HOME</a>
-  <a href="/pichardo-cv/bi/bi-index.html">DATA ENGINEERING</a>
+ <nav>
+  <a href="/pichardo-cv/">PORTFOLIO HOME</a>
+  <a href="/pichardo-cv/cv.html">CV</a>
   <a href="/pichardo-cv/blog/">LEGACY PROJECTS</a>
   </nav>
 </header>
 
 <article> 
 <div><img src="images/headshot.jpeg" ></img></div> 
-<div></br>
-Thank you for taking the time to visit my portfolio website! I am a data engineer and project manager, currently seeking new opportunities. I come from a startup and brand-development background, in addition to bringing exceptionally strong enterprise experience building secure, scalable, value-adding solutions for handling vast, sensitive data from ingestion to insight delivery.
+<div>
+Thank you for taking the time to visit my portfolio website! I am a data engineer currently open to new opportunities. I come from a startup and brand-development background, in addition to bringing exceptionally strong enterprise experience building secure, scalable, value-adding products for handling vast, sensitive data from ingestion to insight delivery.
    </br></br>
-Large-scale portfolio projects with an emphasis on cloud data engineering and AI are currently being configured for display on this webpage. However, some of my older projects are currently available to view in the legacy projects section. If you arrived here from a link on my resume or application, please don't hesitate to reach out with questions at <a href=mailto:“stephan.pichardo@protonmail.com”>stephan.pichardo@protonmail.com</a></br>
-</div></article>
+I am using this page to host portfolio projects with live data and an emphasis on pipeline orchestration and AI governance. In addition, explorations in machine learning and business analytics from a blog I used to host have been given their own "legacy projects" section. If you arrived here from a link on my resume or application, please don't hesitate to reach out at <a href=mailto:“stephan.pichardo@protonmail.com”>stephan.pichardo@protonmail.com</a> for questions, the latest CV, or a sneak peak at in-progress portfolio items. </br>
+</div>
+
+</br>
+
+<div>
+<span style="text-align: center;"><h2>PORTFOLIO CONTENT</h2></span>
+</div>
+
+
+<div id="project-list"></div>
+<script src="bi/js/get-projects.js"></script>
+</article>
 
 <div id="cert-list"></div>
 
 <style>
+header {
+  text-align: center;
+  padding: 0rem;
+  color: rgb(60, 61, 71);
+}
+
+article {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+  color: #333;
+  max-width: 1200px;
+  margin: auto;
+}
+
 img {
-  width: 150px;
+  width: 175px;
   float: left;
   margin: 10px;
   margin-right: 20px;
@@ -72,7 +98,35 @@ img {
   transition: transform 0.3s ease;
 }
 
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 40px; 
+  padding: 10px;
+  margin: auto;
+}
 
+#project-list section {
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  height: max-content;
+  opacity: 0.9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: rgb(41, 41, 47);
+}
+
+#project-list section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.pcard {
+  display: grid;
+  grid-template-columns:  repeat(1, 1fr);
+  gap: 20px; 
+}
 
 </style> 
 
