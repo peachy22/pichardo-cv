@@ -23,7 +23,7 @@ header, body, footer, article, section, iframe, .mermaid, .module, p, img, butto
 iframe {
   display:block;
   border:none;
-  width: 950px;
+  width: 1200px;
   height:100vh; 
   margin: auto;
 }
@@ -48,7 +48,7 @@ article {
 
 header {
   text-align: center;
-  padding: 1rem;
+  padding: 0rem;
   color: rgb(60, 61, 71);
 }
 
@@ -79,7 +79,7 @@ nav a:hover {
 #blog-list section {
   transition: all 0.3s ease;
   padding: 15px;
-  height: 150px;
+  height: max-content;
   border-radius: 10px;
   background-color: #f9f9f9;
   opacity: 0.9;
@@ -110,36 +110,6 @@ nav a:hover {
   gap: 20px; 
 }
 
-.pthumbnail img {
-  width: 303500px;      
-  height: 200px;     
-  border-radius: 8px;
-}
-
-#project-list {
-  display: grid;
-  grid-template-columns: 1;
-  gap: 40px; 
-  padding: 10px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-#project-list section {
-  transition: all 0.3s ease;
-  padding: 15px;
-  height: max-content;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  opacity: 0.9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: rgb(41, 41, 47);
-}
-
-#project-list section:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
 
 .looker-container {
 margin: auto;
