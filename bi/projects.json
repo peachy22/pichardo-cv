@@ -1,9 +1,9 @@
 [
   {
     "name": "tutor-testprep",
-    "title": "SP Tutor & Test Prep",
+    "title": "OLTP -> OLAP Cloud Orchestration",
     "date": "2025-10-30",
-    "summary": "View the pipeline architecture and live analytical insights for data emitted daily by a business operations simulator. An end-to-end AWS pipeline ingests raw OLTP rows, then cleanses it into OLAP fact and SCD2 dimensions ready for executive consumption in the gold layer.",
+    "summary": "View the pipeline architecture and live analytical insights for data emitted daily by a operations simulator for a test prep company. An end-to-end AWS pipeline ingests raw rows, then cleanses it into facts and SCD2 dimensions ready for gold layer consumption.",
     "link": "bi/projects/tutor-testprep/tutor-testprep.html",
     "image": "images/Nightwing-106-Dan-Mora-Banner.jpg.webp",
     "stack": "S3 | Athena | Lambda | EventBridge | Google Cloud"

@@ -15,14 +15,14 @@
     "image": "images/pb_an.png"
   },
   {
-    "name": "am_ai",
-    "link": "/pichardo-cv/",
-    "image": "images/am_ai_bw.png"
-  },
-  {
     "name": "am_eng",
     "link": "https://www.credly.com/badges/28c7c261-b3ca-4831-a385-c9478819c369",
     "image": "images/am_eng.png"
+  },
+  {
+    "name": "am_ai",
+    "link": "/pichardo-cv/",
+    "image": "images/am_ai_bw.png"
   },
   {
     "name": "az_ai",
