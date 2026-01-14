@@ -1,7 +1,7 @@
 [
   {
     "name": "tutor-testprep",
-    "title": "OLTP -> OLAP Cloud Orchestration",
+    "title": " Cloud OLTP -> OLAP Orchestration",
     "date": "2025-10-30",
     "summary": "View the pipeline architecture and live analytical insights for data emitted daily by a operations simulator for a test prep company. An end-to-end AWS pipeline ingests raw rows, then cleanses it into facts and SCD2 dimensions ready for gold layer consumption.",
     "link": "bi/projects/tutor-testprep/tutor-testprep.html",

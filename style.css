@@ -143,8 +143,8 @@ img {
 iframe {
   display:block;
   border:none;
-  width: 950px;
-  height:100vh; 
+  /* width: 950px;
+  height:100vh;  */
   margin: auto;
 }
 
