@@ -4,8 +4,8 @@
     "title": " Cloud OLTP -> OLAP Orchestration",
     "date": "2025-10-30",
     "summary": "View the pipeline architecture and live analytical insights for data emitted daily by a operations simulator for a test prep company. An end-to-end AWS pipeline ingests raw rows, then cleanses it into facts and SCD2 dimensions ready for gold layer consumption.",
-    "link": "bi/projects/tutor-testprep/tutor-testprep.html",
-    "image": "images/Nightwing-106-Dan-Mora-Banner.jpg.webp",
+    "link": "",
+    "image": "",
     "stack": "S3 | Athena | Lambda | EventBridge | Google Cloud"
   },
   {
@@ -14,7 +14,7 @@
     "date": "2022-10-25",
     "summary": "7 research projects mostly related to machine learning, mostly presented in R or Python notebooks. Topics include natural language processing, time series, market basket, and predictive analytics. Data contexts include healthcare, real estate, retail, tech, and government.",
     "link": "blog/index.html",
-    "image": "images/2020-05-31.png",
+    "image": "",
     "stack": "Tensorflow ML | Keras Deep Learning | Tableau | SAS "
   }
 ]
