@@ -1,4 +1,4 @@
-fetch('/pichardo-cv/certs.json')
+fetch('/pichardo-cv/json/certs.json')
   .then(response => response.json())
   .then(posts => {
     const certList = document.getElementById('cert-list');
