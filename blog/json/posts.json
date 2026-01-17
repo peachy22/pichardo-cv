@@ -4,55 +4,55 @@
     "title": "Customer Sentiment Analysis (NLP / AI)",
     "date": "2022-03-08",
     "summary": "Extracted insights from unstructured feedback, shaping strategic business decisions.",
-    "link": "../blog/posts/glove.html",
-    "image": "../blog/images/image-2.png"
+    "link": "/pichardo-cv/blog/posts/glove.html",
+    "image": "/pichardo-cv/blog/images/image-2.png"
   },
   {
     "name": "disaster",
     "title": "Disaster Preparedness (R)",
     "date": "2022-10-25",
     "summary": "Modeled survivability from the 2015 Nepal earthquake to inform actionable readiness measures.",
-    "link": "../blog/posts/disaster.html",
-    "image": "../blog/images/nat.jpeg"
+    "link": "/pichardo-cv/blog/posts/disaster.html",
+    "image": "/pichardo-cv/blog/images/nat.jpeg"
   },
   {
     "name": "revenue",
     "title": "Revenue Projection (R)",
     "date": "2022-11-07",
     "summary": "Developed forecasting model enabling scenario planning and data-driven financial strategy.",
-    "link": "../blog/posts/revenue.html",
-    "image": "../blog/images/wance-paleri-HPM0CDfNtx0-unsplash.jpg"
+    "link": "/pichardo-cv/blog/posts/revenue.html",
+    "image": "/pichardo-cv/blog/images/wance-paleri-HPM0CDfNtx0-unsplash.jpg"
   },
   {
     "name": "mortgage",
     "title": "Mortgage Approval (Python)",
     "date": "2022-11-08",
     "summary": "Built predictive model enhancing mortgage approval accuracy and risk assessment.",
-    "link": "../blog/posts/mortgage.html",
-    "image": "../blog/images/photo-1524813686514-a57563d77965.jpg"
+    "link": "/pichardo-cv/blog/posts/mortgage.html",
+    "image": "/pichardo-cv/blog/images/photo-1524813686514-a57563d77965.jpg"
   },
   {
     "name": "hospital",
     "title": "Health Network Readmission (Tableau)",
     "date": "2023-04-20",
     "summary": "Tracked hospital readmissions, reducing operational risk and highlighting intervention areas.",
-    "link": "../blog/posts/hospital.html",
-    "image": "../blog/images/image.png"
+    "link": "/pichardo-cv/blog/posts/hospital.html",
+    "image": "/pichardo-cv/blog/images/image.png"
   },
   {
     "name": "basket",
     "title": "Market Basket Analysis (R)",
     "date": "2023-06-01",
     "summary": "Analyzed purchase affinities, uncovering cross-sell opportunities and informing merchandising strategy.",
-    "link": "../blog/posts/basket.html",
-    "image": "../blog/images/craiyon_100102_analysis_of_shopping_cart_trends_for_data_driven_decision_making.png"
+    "link": "/pichardo-cv/blog/posts/basket.html",
+    "image": "/pichardo-cv/blog/images/craiyon_100102_analysis_of_shopping_cart_trends_for_data_driven_decision_making.png"
   },
   {
     "name": "business",
     "title": "Simple and Effective Business Visuals",
     "date": "2024-07-11",
     "summary": "A SAS case study in function over form",
-    "link": "../blog/posts/business.html",
-    "image": "../blog/images/group-diverse-people-having-business-meeting.jpg"
+    "link": "/pichardo-cv/blog/posts/business.html",
+    "image": "/pichardo-cv/blog/images/group-diverse-people-having-business-meeting.jpg"
   }
 ]

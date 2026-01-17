@@ -1,5 +1,5 @@
 
-fetch('../blog/json/posts.json')
+fetch('/pichardo-cv/blog/json/posts.json')
   .then(response => response.json())
   .then(posts => {
     const blogList = document.getElementById('blog-list');

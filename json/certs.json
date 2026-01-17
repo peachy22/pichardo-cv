@@ -2,31 +2,31 @@
   {
     "name": "wg_adv_mdl",
     "link": "https://wgu.badges.parchment.com/public/assertions/SDOEVnXHSp2bEe7qG1bWhw",
-    "image": "../images/wg_adv_mdl.png"
+    "image": "/pichardo-cv/images/wg_adv_mdl.png"
   },
   {
     "name": "az_ent_an",
     "link": "https://learn.microsoft.com/en-us/users/stephanpichardo-4037/credentials/8011dfdb1640aeb6",
-    "image": "../images/az_ent_an.png"
+    "image": "/pichardo-cv/images/az_ent_an.png"
   },
   {
     "name": "pb_an",
     "link": "https://learn.microsoft.com/en-us/users/stephanpichardo-4037/credentials/1e3474c406786924",
-    "image": "../images/pb_an.png"
+    "image": "/pichardo-cv/images/pb_an.png"
   },
   {
     "name": "am_eng",
     "link": "https://www.credly.com/badges/28c7c261-b3ca-4831-a385-c9478819c369",
-    "image": "../images/am_eng.png"
+    "image": "/pichardo-cv/images/am_eng.png"
   },
   {
     "name": "am_ai",
-    "link": "../",
-    "image": "../images/am_ai_bw.png"
+    "link": "/pichardo-cv/",
+    "image": "/pichardo-cv/images/am_ai_bw.png"
   },
   {
     "name": "az_ai",
-    "link": "../",
+    "link": "/pichardo-cv/",
     "image": "images/az_ai_bw.png"
 
     
