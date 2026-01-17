@@ -29,7 +29,7 @@ article {
   grid-template-columns: repeat(6, 1fr);
   gap: 40px; 
   margin: auto;
-  max-width: 75%;
+  max-width: 100%;
 }
 
 #cert-list img {
