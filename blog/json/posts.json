@@ -1,49 +1,49 @@
 [
   {
     "name": "glove",
-    "title": "Customer Sentiment Analysis ''Like a GloVe''",
+    "title": "Customer Sentiment Analysis (NLP / AI)",
     "date": "2022-03-08",
-    "summary": "AI language processing towards the analysis of customer sentiments",
+    "summary": "Extracted insights from unstructured feedback, shaping strategic business decisions.",
     "link": "../blog/posts/glove.html",
     "image": "../blog/images/image-2.png"
   },
   {
     "name": "disaster",
-    "title": "Machine Learning for Natural Disaster Preparedness",
+    "title": "Disaster Preparedness (R)",
     "date": "2022-10-25",
-    "summary": "Lessons in building survivability from the 2015 Nepal Earthquake",
+    "summary": "Modeled survivability from the 2015 Nepal earthquake to inform actionable readiness measures.",
     "link": "../blog/posts/disaster.html",
     "image": "../blog/images/nat.jpeg"
   },
   {
     "name": "revenue",
-    "title": "Revenue Projection",
+    "title": "Revenue Projection (R)",
     "date": "2022-11-07",
-    "summary": "Modeling future revenue for a telecom company with R",
+    "summary": "Developed forecasting model enabling scenario planning and data-driven financial strategy.",
     "link": "../blog/posts/revenue.html",
     "image": "../blog/images/wance-paleri-HPM0CDfNtx0-unsplash.jpg"
   },
   {
     "name": "mortgage",
-    "title": "Mortgage Approval Prediction",
+    "title": "Mortgage Approval (Python)",
     "date": "2022-11-08",
-    "summary": "A model in Python for analyzing mortgage application data",
+    "summary": "Built predictive model enhancing mortgage approval accuracy and risk assessment.",
     "link": "../blog/posts/mortgage.html",
     "image": "../blog/images/photo-1524813686514-a57563d77965.jpg"
   },
   {
     "name": "hospital",
-    "title": "Health Network Readmission Dashboard",
+    "title": "Health Network Readmission (Tableau)",
     "date": "2023-04-20",
-    "summary": "A Tableau business intelligence tool for hospital readmission rates",
+    "summary": "Tracked hospital readmissions, reducing operational risk and highlighting intervention areas.",
     "link": "../blog/posts/hospital.html",
     "image": "../blog/images/image.png"
   },
   {
     "name": "basket",
-    "title": "Tech Products Market Basket Analysis",
+    "title": "Market Basket Analysis (R)",
     "date": "2023-06-01",
-    "summary": "A study in product purchase affinity for a tech retailer, using R",
+    "summary": "Analyzed purchase affinities, uncovering cross-sell opportunities and informing merchandising strategy.",
     "link": "../blog/posts/basket.html",
     "image": "../blog/images/craiyon_100102_analysis_of_shopping_cart_trends_for_data_driven_decision_making.png"
   },
