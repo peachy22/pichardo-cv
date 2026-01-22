@@ -46,7 +46,7 @@ All simulation behaviors are provided in the project README, but key modeled ass
 <h2>ETL ARCHITECTURE SUMMARY</h2>
 The primary objective is to translate raw, transactional-style data into analytically useful, well-modeled datasets that support reporting, dashboards, and downstream decision-making. To this end, the pipeline follows a layered lakehouse architecture deployed on AWS-managed services:
 </br></br>
-• Raw (Bronze) – Synthetic OLTP-style CSV data landed in S3 
+• Raw (Bronze) – Synthetic OLTP-style CSV data landed in S3, including randomized corruption modes
 </br>
 • Silver – Cleaned, conformed, and relationally consistent tables in Athena 
 </br>
