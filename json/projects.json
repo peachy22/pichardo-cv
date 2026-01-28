@@ -6,7 +6,7 @@
     "summary": "View the pipeline architecture and live analytical insights for data emitted daily by an operations simulator for a test prep company. An end-to-end AWS pipeline ingests raw rows, then cleanses it into facts and SCD2 dimensions ready for gold layer consumption.",
     "link": "/pichardo-cv/tutor-testprep/",
     "image": "",
-    "stack": "S3 | Athena | Lambda | EventBridge | Google Cloud"
+    "stack": "S3 | Athena | Lambda | EventBridge | Looker" 
   },
   {
     "name": "legacy",
