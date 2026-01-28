@@ -20,15 +20,13 @@
     "image": "/pichardo-cv/images/am_eng.png"
   },
   {
-    "name": "am_ai",
-    "link": "/pichardo-cv/",
-    "image": "/pichardo-cv/images/ms_ai_soln_bw.png"
-  },
-  {
-    "name": "az_ai",
+    "name": "ai_eng",
     "link": "/pichardo-cv/",
     "image": "images/az_ai_bw.png"
-
-    
+  },
+  {
+    "name": "ai_soln",
+    "link": "/pichardo-cv/",
+    "image": "/pichardo-cv/images/ms_ai_soln_bw.png"
   }
 ]
