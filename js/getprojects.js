@@ -15,7 +15,6 @@ fetch('/pichardo-cv/json/projects.json')
         <b><span style="font-size: 20px; color: #000000ff; ">${post.title}</span></b>
         <p>${post.summary}</p>
         <p><span style="font-weight: bold;">${post.stack}</span></p>
-        <p>${post.date}</p>
         </div>
         </div>
         </a>
