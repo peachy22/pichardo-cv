@@ -63,7 +63,7 @@ article {
 
 #project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px; 
   padding: 10px;
   margin: auto;
