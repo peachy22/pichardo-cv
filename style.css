@@ -87,7 +87,7 @@ article {
 
 #blog-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 40px; 
   padding: 10px;
   margin: auto;
