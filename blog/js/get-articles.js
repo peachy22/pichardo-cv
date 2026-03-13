@@ -10,11 +10,27 @@ fetch('/pichardo-cv/blog/json/posts.json')
     posts.forEach(post => {
       const section = document.createElement('section');
       section.innerHTML = `<a href="${post.link}" style="text-decoration: none; color: inherit;">
-        <div class = "blog-list-card">
-        <div class = "blog-list-thumbnail"><img src="${post.image}"></img></div>
-        <div><b><span style="font-size: 20px; color: #000000ff; ">${post.title}</span></b><p>${post.summary}</p></div>
+    <div class="blog-list-card">
+        <div class="blog-list-thumbnail">
+            <img src="${post.image}">
         </div>
-        </a>
+
+        <div>
+            <b>
+                <span style="font-size: 20px; color:#000000ff;">
+                    ${post.title}
+                </span>
+            </b>
+            <p><span style="font-size: 14px;">${post.summary}</span></br>
+            <span style="font-size:12px; color:rgb(73,73,73);">
+                    Updated ${post.date}</p>
+                </span>
+        </div>
+
+       
+    </div>
+    
+</a>
       `;
       blogList.appendChild(section);
     });
