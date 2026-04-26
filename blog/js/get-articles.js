@@ -17,7 +17,7 @@ fetch('/pichardo-cv/blog/json/posts.json')
 
         <div>
             <b>
-                <span style="font-size: 20px; color:#000000ff;">
+                <span style="font-size: 16px; color:#000000ff;">
                     ${post.title}
                 </span>
             </b>
