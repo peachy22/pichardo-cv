@@ -26,7 +26,10 @@ Key outcomes have not been limited to <b>100% reductions in manual data compilat
 <div class="clear"></div>
 <h2>INDUSTRY COVERAGE AND PRESS RELEASES</h2>
 
-  <img src="/pichardo-cv/techcare-bi/images/tcbi_billboard.png" alt="Billboard" style="float: right; width: 460px;">
+<img class="press-img"
+     src="/pichardo-cv/techcare-bi/images/tcbi_billboard.png"
+     alt="Billboard">
+  
 <ul style="list-style-type:square;">
   <li><a href = "https://healthcarebusinessoutlook.com/building-an-all-encompassing-bi-proposition-to-optimize-every-nook-and-corner-of-a-healthcare-facility/">Building an All-Encompassing Analytics Proposition to Optimize the Healthcare Facility</a>
 </li>
@@ -79,6 +82,37 @@ All referenced media originates from public press releases or conference materia
 
 
 <style>
+
+  .press-img {
+  float: right;
+  width: 100%;
+  max-width: 420px;   /* caps size on desktop */
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.press-list {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Clear the float before next section */
+.press-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .press-img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+  }
+}
 
   .clear {
   clear: both;
