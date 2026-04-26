@@ -88,9 +88,15 @@ article {
 #blog-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px; 
+  gap: 40px;
   padding: 10px;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  #blog-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 #blog-list section {
@@ -110,17 +116,28 @@ article {
 }
 
 .blog-list-thumbnail img {
-  width: 200px;      
-  height: 150px;     
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .blog-list-card {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px; 
+  gap: 10px;
 }
 
+.blog-list-card span,
+.blog-list-card p {
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .blog-list-card {
+    grid-template-columns: 1fr;
+  }
+}
 #pcard {
   display: grid;
   grid-template-columns:  repeat(1, 1fr);
