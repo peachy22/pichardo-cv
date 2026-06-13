@@ -1,51 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stephan Pichardo | CV</title>
-  <link rel="stylesheet" href="/pichardo-cv/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stephan Pichardo — Data Analytics & Science Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <img class="headshot" src="assets/img/headshot.jpeg" alt="Stephan Pichardo headshot" />
+      <div>
+        <h1>Stephan Pichardo, MSDA, MBA</h1>
+        <p class="tagline">Product-focused data analytics, science, and engineering leader delivering analytics platforms, ML solutions, and measurable business impact.</p>
+        <p class="contact"><a href="mailto:stephan.pichardo@protonmail.com">stephan.pichardo@protonmail.com</a> · <a href="cv/pichardo_cv_2026_m.pdf" target="_blank">Download CV</a></p>
+      </div>
+    </section>
 
-<header>
-<div id="navbar"></div>
-</header>
+    <section>
+      <h2>Selected Projects</h2>
 
-<article> 
-  <h2>ABOUT</h2>
-<div><img src="/pichardo-cv/images/headshot.jpeg" ></img></div> 
-<div>
-Thank you for visiting my portfolio website! I am a technical product leader currently open to new opportunities. I come from a startup and brand-development background, in addition to bringing exceptionally strong enterprise experience building secure, scalable, value-adding products for handling vast, sensitive data from ingestion to transformation to insight delivery. My skillset brings business value at the intersection of stakeholder relationship management and technical excellence. 
-   </br></br>
-I am using this page to host portfolio projects with an emphasis on interactable "live" data artifacts and verifiable enterprise accomplishments. In addition, older explorations of mine in machine learning and business analytics have been given their own "legacy projects" section. If you arrived here from a link on my resume or application, please don't hesitate to reach out at <a href=mailto:“stephan.pichardo@protonmail.com”>stephan.pichardo@protonmail.com</a> for questions, the latest CV, or a sneak peak at in-progress portfolio items. </br>
-</div>
+      <div class="project-grid">
 
-</br>
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/techcare-bi/launch.png"}><strong>Healthcare Compliance Monitoring Platform</strong> <span class="tech-inline">Cloud ELT · Embedded BI · KPI modeling · Role-based access</span></summary>
+            <p class="lead">Delivered an embedded analytics product within a correctional healthcare EHR targeting compliance and operational monitoring.</p>
+            <ul class="accomplishments">
+              <li>Built cloud-native ELT pipelines and embedded dashboards surfaced inside the EHR.</li>
+              <li>Enabled role-based access controls and near-real-time KPI monitoring for clinicians and admins.</li>
+              <li>Supported RFP responses and contributed analytics content for major contract awards.</li>
+            </ul>
+          </details>
+        </article>
 
-  <h2>PORTFOLIO ARTIFACTS</h2>
-<div id="project-list"></div>
-</br>
-  
-  <h2>CERTIFICATION TRACK</h2>
-<div id="cert-list"></div>
-</article>
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/tutor-testprep/architecture-diagram.png"}><strong>Test Prep Cloud Analytics Pipeline</strong> <span class="tech-inline">Python · AWS (S3, Lambda, EventBridge, Athena) · Looker · SQL</span></summary>
+            <p class="lead">Simulated tutoring operations and implemented a layered lakehouse pipeline to produce analytics-ready artifacts.</p>
+            <ul class="accomplishments">
+              <li>Implemented Bronze→Silver→Gold layers using S3, Lambda, EventBridge, and Athena.</li>
+              <li>Developed a business-calibrated simulator modeling seasonality, churn, and tutor capacity.</li>
+              <li>Delivered dashboards for active students, capacity planning, and revenue-cycle analytics.</li>
+            </ul>
+          </details>
+        </article>
 
-<canvas id="particle-bg"></canvas>
-<script src ="/pichardo-cv/js/particles.js"></script>
-<script src="/pichardo-cv/js/getprojects.js"></script>
-<script src="/pichardo-cv/js/getcerts.js"></script>
-<script src="/pichardo-cv/js/getdegs.js"></script>
-<script src="/pichardo-cv/js/getnav.js"></script>
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/blog/image-2.png"}><strong>Customer Sentiment Analysis</strong> <span class="tech-inline">Python · NLP · Topic Modeling · Visualization</span></summary>
+            <p class="lead">Extracted insights from unstructured customer feedback to inform product and strategy decisions.</p>
+            <ul class="accomplishments">
+              <li>Applied text preprocessing and topic modeling to surface customer pain points.</li>
+              <li>Produced dashboards and summaries for stakeholders to guide prioritization.</li>
+            </ul>
+          </details>
+        </article>
 
-<style>
-  img {
-  z-index: 1;
-  width: 200px;
-  float: left;
-  margin: 10px;
-  margin-right: 20px;
-  border-radius: 30px;
-}
-</style>
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/blog/nat.jpeg"}><strong>Disaster Preparedness Modeling</strong> <span class="tech-inline">R · Statistical Modeling · Data Visualization</span></summary>
+            <p class="lead">Modeled earthquake survivability to identify actionable readiness measures and inform response strategies.</p>
+            <ul class="accomplishments">
+              <li>Built statistical models in R to estimate survival probabilities and key risk factors.</li>
+              <li>Translated findings into practical readiness recommendations for stakeholders.</li>
+            </ul>
+          </details>
+        </article>
 
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/blog/wance-paleri-HPM0CDfNtx0-unsplash.jpg"}><strong>Revenue Projection</strong> <span class="tech-inline">R · Time-series Forecasting · Scenario Analysis</span></summary>
+            <p class="lead">Developed forecasting models to support financial scenario planning and strategic decision-making.</p>
+            <ul class="accomplishments">
+              <li>Built time-series forecasting models and scenario simulations.</li>
+              <li>Enabled executives to compare outcomes under alternate assumptions.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/blog/image.png"}><strong>Health Network Readmission</strong> <span class="tech-inline">Tableau · SQL · Cohort Analysis</span></summary>
+            <p class="lead">Analyzed readmission patterns to reduce operational risk and identify intervention opportunities.</p>
+            <ul class="accomplishments">
+              <li>Built dashboards to monitor readmission metrics and high-risk cohorts.</li>
+              <li>Prioritized interventions that reduced readmission exposure.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <details>
+            <summary data-hero="assets/img/blog/craiyon_100102_analysis_of_shopping_cart_trends_for_data_driven_decision_making.png"}><strong>Tech Product Market Basket Analysis</strong> <span class="tech-inline">R · Association Rules · Analytics Translation</span></summary>
+            <p class="lead">Analyzed purchase affinities to uncover cross-sell opportunities and inform product merchandising.</p>
+            <ul class="accomplishments">
+              <li>Applied association rules and affinity analysis to identify common purchase bundles.</li>
+              <li>Turned findings into merchandising recommendations to drive incremental revenue.</li>
+            </ul>
+          </details>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Selected Certifications</h2>
+      <div id="cert-list"></div>
+    </section>
+
+  </main>
+
+  <!-- Modal for project details -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/modal-details.js"></script>
+  <script src="assets/js/close-details.js"></script>
+  <script src="assets/js/getcerts.js"></script>
+</body>
 </html>
