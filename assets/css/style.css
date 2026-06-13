@@ -27,7 +27,7 @@ nav a:hover{color:var(--accent)}
 
 /* Project grid and expandable details */
 .project-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:12px; align-items:start}
-.project-card{background:#fff; border:1px solid #eee; padding:12px; border-radius:8px; position:relative; display:flex; flex-direction:column; height:100px; overflow:hidden}
+.project-card{background:#fff; border:1px solid #eee; padding:12px; border-radius:8px; position:relative; display:flex; flex-direction:column; height:120px; overflow:hidden}
 .project-card details{cursor:pointer; display:flex; flex-direction:column; height:100%}
 .project-card summary{font-weight:600; font-size:1rem; list-style:none; outline:none}
 .project-card summary::-webkit-details-marker{display:none}
