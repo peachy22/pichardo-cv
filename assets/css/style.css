@@ -20,8 +20,13 @@ nav a:hover{color:var(--accent)}
 .project-card{background:#fff; border:1px solid #eee; padding:16px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.04)}
 .project-card h3{margin:0 0 8px; font-size:1.05rem}
 .project-meta{font-size:0.9rem; color:var(--muted); margin-top:8px}
-#cert-list{display:flex; flex-wrap:wrap; gap:12px; margin-top:12px}
-.cert img{height:56px; object-fit:contain; opacity:0.9}
+#cert-list{display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; justify-content:center; align-items:center}
+.cert{display:flex; align-items:center; justify-content:center}
+.cert img{height:120px; max-width:240px; object-fit:contain; opacity:0.95; display:block}
+
+@media (max-width:600px){
+  .cert img{height:84px; max-width:180px}
+}
 .footer{padding:30px 0; text-align:center; color:var(--muted); border-top:1px solid #f0f0f0}
 @media(max-width:600px){.hero{flex-direction:column; align-items:flex-start}.headshot{width:96px; height:96px}}
 
@@ -45,12 +50,29 @@ nav a:hover{color:var(--accent)}
 .modal-close{position:absolute; right:12px; top:8px; border:none; background:transparent; font-size:24px; cursor:pointer}
 .modal .tech{color:var(--muted); font-size:0.95rem; margin-top:0}
 .modal h2{margin-top:0}
-.modal-heroes{display:flex; gap:8px; justify-content:space-between; align-items:stretch; margin-top:12px; width:100%; flex-wrap:wrap; box-sizing:border-box}
-.modal-heroes .modal-hero{flex:1 1 calc((100% - 16px)/3); max-width:calc((100% - 16px)/3); width:100%; aspect-ratio:16/9; border-radius:8px; display:block; object-fit:cover; margin:0; max-height:55vh}
+.modal-heroes{display:grid; gap:8px; margin-top:12px; width:100%}
+
+/* Single image: center wrapper and limit to 50% of modal (image fills wrapper). */
+.modal-heroes.count-1{grid-template-columns:1fr; justify-items:center; width:50%; margin:0 auto}
+.modal-heroes.count-1 .modal-hero{width:100%; max-width:100%; max-height:65vh; object-fit:contain}
+
+/* Two images: wrapper centered and occupies 75% of modal; images share space evenly. */
+.modal-heroes.count-2{grid-template-columns:repeat(2, minmax(0, 1fr)); width:75%; margin:0 auto}
+.modal-heroes.count-2 .modal-hero{width:100%; max-height:40vh; object-fit:contain}
+
+.modal-heroes.count-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
+.modal-heroes.count-4plus{grid-template-columns:repeat(3, minmax(0, 1fr))}
+.modal-heroes .modal-hero{width:100%; border-radius:8px; display:block; margin:0; background:#f7f7f7}
+
 @media (max-width:800px){
-  .modal-heroes{flex-direction:column}
-  .modal-heroes .modal-hero{flex:1 1 100%; max-width:100%}
+  .modal-heroes{grid-template-columns:1fr; width:100%; margin:0}
+  .modal-heroes.count-1{width:100%}
+  .modal-heroes.count-2{width:100%}
+  .modal-heroes .modal-hero{max-height:40vh}
 }
+
+/* Full-width bottom image inside modal details (Test Prep) */
+.modal-detail-container .modal-bottom-image{width:100%; max-width:100%; height:auto; display:block; margin-top:12px}
 
 /* Ensure images never overflow modal content */
 .modal-content img{max-width:100%; height:auto; display:block}

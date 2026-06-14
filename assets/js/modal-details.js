@@ -52,29 +52,40 @@ document.addEventListener('DOMContentLoaded', () => {
       const ul = details.querySelector('.accomplishments');
       if (ul) container.appendChild(ul.cloneNode(true));
 
-      // Move hero images to the bottom of the modal and display three copies side-by-side.
-      const heroSrc = summary.dataset.hero;
-      if (heroSrc) {
-        // If this is the tutor-testprep project, embed its page (which contains an iframe) instead of static images.
-        if (heroSrc.includes('tutor-testprep')) {
-          const iframe = document.createElement('iframe');
-          iframe.src = 'tutor-testprep/index.html';
-          iframe.className = 'modal-iframe';
-          iframe.setAttribute('aria-label', 'Test Prep Analytics');
-          iframe.setAttribute('loading', 'lazy');
-          container.appendChild(iframe);
-        } else {
-          const heroWrap = document.createElement('div');
-          heroWrap.className = 'modal-heroes';
-          for (let i = 0; i < 3; i++) {
-            const img = document.createElement('img');
-            img.src = heroSrc;
-            img.alt = '';
-            img.className = 'modal-hero';
-            heroWrap.appendChild(img);
-          }
-          container.appendChild(heroWrap);
+      const heroSources = [];
+      if (summary.dataset.heroes) {
+        heroSources.push(...summary.dataset.heroes.split(',').map((src) => src.trim()).filter(Boolean));
+      }
+      ['hero', 'hero2', 'hero3', 'hero4', 'hero5'].forEach((key) => {
+        const src = summary.dataset[key];
+        if (src) heroSources.push(src.trim());
+      });
+
+      // Skip rendering hero images for the tutor-testprep project (we embed an iframe instead)
+      const isTutorProject = heroSources.some((s) => s.includes('tutor-testprep'));
+      if (heroSources.length && !isTutorProject) {
+        const spacer = document.createElement('div');
+        spacer.className = 'modal-spacer';
+        container.appendChild(spacer);
+
+        const heroWrap = document.createElement('div');
+        heroWrap.className = 'modal-heroes';
+        heroWrap.classList.add(heroSources.length <= 3 ? `count-${heroSources.length}` : 'count-4plus');
+
+        // If the hero references the lakehouse architecture image, mark as full-width
+        if (heroSources.some((s) => s.includes('lakehouse-architecture.png') || s.includes('architecture-diagram.png'))) {
+          heroWrap.classList.add('project-fullwidth');
         }
+
+        heroSources.forEach((src) => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = '';
+          img.className = 'modal-hero';
+          heroWrap.appendChild(img);
+        });
+
+        container.appendChild(heroWrap);
       }
 
       openModal(container);
