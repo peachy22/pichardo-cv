@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function attachProjectSummaryListeners() {
   const modal = document.getElementById('project-modal');
   if (!modal) return;
   const modalBody = document.getElementById('modal-body');
@@ -46,11 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
       header.innerHTML = `<h2>${titleHTML}</h2>${techHTML}`;
       container.appendChild(header);
 
-
       const lead = details.querySelector('.lead');
       if (lead) container.appendChild(lead.cloneNode(true));
       const ul = details.querySelector('.accomplishments');
       if (ul) container.appendChild(ul.cloneNode(true));
+      const bottomImg = details.querySelector('.modal-bottom-image');
+      if (bottomImg) container.appendChild(bottomImg.cloneNode(true));
 
       const heroSources = [];
       if (summary.dataset.heroes) {
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroWrap.classList.add(heroSources.length <= 3 ? `count-${heroSources.length}` : 'count-4plus');
 
         // If the hero references the lakehouse architecture image, mark as full-width
-        if (heroSources.some((s) => s.includes('lakehouse-architecture.png') || s.includes('architecture-diagram.png'))) {
+        if (heroSources.some((s) => s.includes('lakehouse-architecture.png') || s.includes('lakehouse_architecture.png') || s.includes('architecture-diagram.png'))) {
           heroWrap.classList.add('project-fullwidth');
         }
 
@@ -98,4 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-});
+}
+
+window.attachProjectSummaryListeners = attachProjectSummaryListeners;
+
+if (document.readyState !== 'loading') {
+  attachProjectSummaryListeners();
+} else {
+  document.addEventListener('DOMContentLoaded', attachProjectSummaryListeners);
+}

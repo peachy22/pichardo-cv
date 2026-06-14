@@ -1,4 +1,8 @@
-[
+[ {
+    "name": "jh_machlearn",
+    "link": "https://coursera.org/share/49ba9d831388ceddac3e2a6bce40c8af",
+    "image": "assets/img/certs/jh_ml.png"
+  },
   {
     "name": "wg_adv_mdl",
     "link": "https://wgu.badges.parchment.com/public/assertions/SDOEVnXHSp2bEe7qG1bWhw",
@@ -21,12 +25,12 @@
   },
   {
     "name": "ai_eng",
-    "link": "/pichardo-cv/",
+    "link": "./",
     "image": "assets/img/certs/az_ai_bw.png"
   },
   {
     "name": "ai_soln",
-    "link": "/pichardo-cv/",
+    "link": "./",
     "image": "assets/img/certs/ms_ai_soln_bw.png"
   }
 ]

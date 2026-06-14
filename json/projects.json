@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Healthcare Compliance Monitoring Platform",
+    "tech": "Cloud ELT · Embedded PowerBI · KPI modeling · AI Insights",
+    "lead": "Delivered an embedded analytics product within a correctional healthcare EHR targeting compliance and operational monitoring.",
+    "accomplishments": [
+      "Managed a team building cloud-native ELT pipelines and embedded dashboards surfaced inside the EHR.",
+      "Enabled role-based access controls and near-real-time KPI monitoring for clinicians and admins.",
+      "Supported RFP responses and contributed analytics content for 9-figure contract awards."
+    ],
+    "heroes": [
+      "assets/img/tcbi_award.png",
+      "assets/img/tcbi_billboard.png",
+      "assets/img/tcbi_homepage.png"
+    ],
+    "featured": true
+  },
+  {
+    "title": "Test Prep Cloud Analytics Pipeline",
+    "tech": "Python · AWS (S3, Lambda, EventBridge, Athena) · Looker · SQL",
+    "lead": "Simulated tutoring operations and implemented a layered lakehouse pipeline to produce analytics-ready artifacts.",
+    "accomplishments": [
+      "Implemented Bronze→Silver→Gold layers using S3, Lambda, EventBridge, and Athena.",
+      "Developed a business-calibrated simulator modeling seasonality, churn, and tutor capacity.",
+      "Delivered dashboards for active students, capacity planning, and revenue-cycle analytics."
+    ],
+    "bottomImage": {
+      "src": "assets/img/lakehouse_architecture.png",
+      "alt": "Lakehouse architecture"
+    }
+  },
+  {
+    "title": "Customer Sentiment Analysis",
+    "tech": "Python · NLP · Topic Modeling · AI",
+    "lead": "Extracted insights from unstructured customer feedback to inform product and strategy decisions.",
+    "accomplishments": [
+      "Applied text preprocessing and topic modeling to surface quantified customer feedback from unstructured data.",
+      "Produced visuals and summaries for stakeholders to guide prioritization."
+    ],
+    "heroes": [
+      "assets/img/sentiment_loss.png",
+      "assets/img/sentiment_marix.png",
+      "assets/img/sentiment_cloud.png"
+    ]
+  },
+  {
+    "title": "Disaster Preparedness Modeling",
+    "tech": "R · Statistical Modeling · Visualization · XGBoost",
+    "lead": "Modeled earthquake survivability to identify actionable readiness measures and inform response strategies.",
+    "accomplishments": [
+      "Built statistical models in R to estimate survival probabilities and key risk factors.",
+      "Translated findings into practical readiness recommendations for stakeholders."
+    ],
+    "heroes": [
+      "assets/img/disaster_map.png"
+    ]
+  },
+  {
+    "title": "Revenue Projection",
+    "tech": "R · Time-series Forecasting · Scenario Analysis · ARIMA",
+    "lead": "Developed forecasting models to support financial scenario planning and strategic decision-making.",
+    "accomplishments": [
+      "Built time-series forecasting models and scenario simulations.",
+      "Enabled executives to compare outcomes under alternate assumptions."
+    ],
+    "heroes": [
+      "assets/img/revenue_fit.png",
+      "assets/img/revenue_forecast.png"
+    ]
+  },
+  {
+    "title": "Health Network Readmission",
+    "tech": "Tableau · SQL · Risk Analysis",
+    "lead": "Analyzed readmission patterns to reduce operational risk and identify intervention opportunities.",
+    "accomplishments": [
+      "Built dashboards to monitor readmission metrics and high-risk cohorts.",
+      "Prioritized interventions that reduced readmission exposure."
+    ],
+    "heroes": [
+      "assets/img/readmission_tableau.png"
+    ]
+  },
+  {
+    "title": "Tech Product Market Basket Analysis",
+    "tech": "R · Association Rules · Customer Segmentation",
+    "lead": "Analyzed purchase affinities to uncover cross-sell opportunities and inform product merchandising.",
+    "accomplishments": [
+      "Applied association rules and affinity analysis to identify common purchase bundles.",
+      "Turned findings into merchandising recommendations to drive incremental revenue."
+    ],
+    "heroes": [
+      "assets/img/basket_map.png"
+    ]
+  }
+]
