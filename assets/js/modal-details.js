@@ -46,22 +46,36 @@ document.addEventListener('DOMContentLoaded', () => {
       header.innerHTML = `<h2>${titleHTML}</h2>${techHTML}`;
       container.appendChild(header);
 
-      const heroSrc = summary.dataset.hero;
-      if (heroSrc) {
-        const heroWrap = document.createElement('div');
-        heroWrap.className = 'modal-heroes';
-        const img = document.createElement('img');
-        img.src = heroSrc;
-        img.alt = '';
-        img.className = 'modal-hero';
-        heroWrap.appendChild(img);
-        container.appendChild(heroWrap);
-      }
 
       const lead = details.querySelector('.lead');
       if (lead) container.appendChild(lead.cloneNode(true));
       const ul = details.querySelector('.accomplishments');
       if (ul) container.appendChild(ul.cloneNode(true));
+
+      // Move hero images to the bottom of the modal and display three copies side-by-side.
+      const heroSrc = summary.dataset.hero;
+      if (heroSrc) {
+        // If this is the tutor-testprep project, embed its page (which contains an iframe) instead of static images.
+        if (heroSrc.includes('tutor-testprep')) {
+          const iframe = document.createElement('iframe');
+          iframe.src = 'tutor-testprep/index.html';
+          iframe.className = 'modal-iframe';
+          iframe.setAttribute('aria-label', 'Test Prep Analytics');
+          iframe.setAttribute('loading', 'lazy');
+          container.appendChild(iframe);
+        } else {
+          const heroWrap = document.createElement('div');
+          heroWrap.className = 'modal-heroes';
+          for (let i = 0; i < 3; i++) {
+            const img = document.createElement('img');
+            img.src = heroSrc;
+            img.alt = '';
+            img.className = 'modal-hero';
+            heroWrap.appendChild(img);
+          }
+          container.appendChild(heroWrap);
+        }
+      }
 
       openModal(container);
     });
