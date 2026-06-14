@@ -7,6 +7,7 @@
 }
 *{box-sizing:border-box}
 body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#111; background:var(--bg); line-height:1.5}
+#particle-bg{position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background:var(--bg)}
 .container{max-width:var(--container); margin:40px auto; padding:0 20px}
 header{padding:20px 0; text-align:center; border-bottom:1px solid #eee}
 nav a{color:var(--muted); text-decoration:none; margin:0 10px}
@@ -21,7 +22,8 @@ nav a:hover{color:var(--accent)}
 .project-card h3{margin:0 0 8px; font-size:1.05rem}
 .project-meta{font-size:0.9rem; color:var(--muted); margin-top:8px}
 #cert-list{display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; justify-content:center; align-items:center}
-.cert{display:flex; align-items:center; justify-content:center}
+.cert{display:flex; align-items:center; justify-content:center; cursor:pointer; transition:transform 0.2s ease}
+.cert:hover{transform:scale(1.08)}
 .cert img{height:120px; max-width:240px; object-fit:contain; opacity:0.95; display:block}
 
 @media (max-width:600px){
@@ -32,7 +34,9 @@ nav a:hover{color:var(--accent)}
 
 /* Project grid and expandable details */
 .project-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:12px; align-items:start}
-.project-card{background:#fff; border:1px solid #eee; padding:12px; border-radius:8px; position:relative; display:flex; flex-direction:column; height:120px; overflow:hidden}
+.project-card{background:#fff; border:1px solid #eee; padding:12px; border-radius:8px; position:relative; display:flex; flex-direction:column; height:120px; overflow:hidden; cursor:pointer; transition:transform 0.2s ease, box-shadow 0.2s ease}
+.project-card.featured-card{background: linear-gradient(135deg, hsl(51, 40%, 83%) 0%, #fff781 45%, #d6bd3ef8 100%); border:1px solid transparent; box-shadow:0 8px 24px rgba(81, 87, 160, 0.18)}
+.project-card:hover,.project-card:focus-within{transform:scale(1.03); box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .project-card details{cursor:pointer; display:flex; flex-direction:column; height:100%}
 .project-card summary{font-weight:600; font-size:1rem; list-style:none; outline:none}
 .project-card summary::-webkit-details-marker{display:none}
