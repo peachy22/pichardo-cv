@@ -91,5 +91,14 @@
     "heroes": [
       "assets/img/basket_map.png"
     ]
+  },
+  {
+    "title": "Custom SQL Server CRM/SIS",
+    "tech": "C# · .NET · SQL Server",
+    "lead": "Built a custom enterprise software ecosystem in support of edtech business operations.",
+    "accomplishments": [
+    ],
+    "heroes": [
+    ]
   }
 ]
