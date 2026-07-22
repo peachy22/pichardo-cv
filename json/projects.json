@@ -1,8 +1,15 @@
-[
+[ {
+    "title": "Quality Decision Intelligence Engine - Medical Devices",
+    "tech": "Python · PandasAI · LLM Deployment",
+    "lead": "Deployed QDI (Quality Decision Intelligence, pronounced 'cutie'), a secure locally-hosted LLM supporting executive decisions against operational data.",
+    "accomplishments": [
+      "Tuned delivery based on collaboration with executive stakeholders over data quality pain points and manual processes."
+    ]
+  },
   {
     "title": "Healthcare Compliance Monitoring Platform",
     "tech": "Cloud ELT · Embedded PowerBI · KPI modeling · AI Insights",
-    "lead": "Delivered an embedded analytics product within a correctional healthcare EHR targeting compliance and operational monitoring.",
+    "lead": "Architect of an embedded analytics product within a correctional healthcare EHR targeting compliance and operational monitoring.",
     "accomplishments": [
       "Managed a team building cloud-native ELT pipelines and embedded dashboards surfaced inside the EHR.",
       "Enabled role-based access controls and near-real-time KPI monitoring for clinicians and admins.",
