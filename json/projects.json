@@ -1,7 +1,7 @@
 [ {
     "title": "Quality Decision Intelligence Engine - Medical Devices",
-    "tech": "Python · PandasAI · LLM Deployment",
-    "lead": "Deployed QDI (Quality Decision Intelligence, pronounced 'cutie'), a secure locally-hosted LLM supporting executive decisions against operational data.",
+    "tech": "Python · PandasAI · Model Deployment",
+    "lead": "Deployed QDI (Quality Decision Intelligence, pronounced 'cutie'), a secure locally-hosted LLM interface supporting executive decisions against operational data.",
     "accomplishments": [
       "Tuned delivery based on collaboration with executive stakeholders over data quality pain points and manual processes."
     ]
@@ -100,8 +100,8 @@
     ]
   },
   {
-    "title": "Custom SQL Server CRM/SIS",
-    "tech": "C# · .NET · SQL Server",
+    "title": "Custom CRM/SIS Deployment",
+    "tech": "Python · SQL Server",
     "lead": "Built a custom enterprise software ecosystem in support of edtech business operations.",
     "accomplishments": [
     ],
