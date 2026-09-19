@@ -15,7 +15,7 @@ nav a:hover{color:var(--accent)}
 .hero{display:flex; gap:20px; align-items:center}
 .headshot{width:140px; height:140px; border-radius:8px; object-fit:cover; flex:0 0 140px}
 .tagline{color:var(--muted); margin-top:0}
-.contact a{color:var(--accent); text-decoration:none}
+.contact a{color:var(--muted); text-decoration:none}
 #project-list{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:18px; margin-top:12px}
 .project-card{background:#fff; border:1px solid #eee; padding:16px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.04)}
 .project-card h3{margin:0 0 8px; font-size:1.05rem}
